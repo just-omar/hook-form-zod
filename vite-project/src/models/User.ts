@@ -67,5 +67,6 @@ export const UserSchemaWithGeo = BasicUserSchema.extend({
   address: UserAddressSchemaWithGeo,
 }).merge(HasIDSSchema);
 
+export type BasicUser = z.infer<typeof BasicUserSchema>;
 export type UserWithAddress = z.infer<typeof UserSchemaWithAddress>;
 export type UserWithGeo = z.infer<typeof UserAddressSchemaWithGeo>;

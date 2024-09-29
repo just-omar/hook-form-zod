@@ -1,11 +1,11 @@
 import {
-  //   BasicUserSchema,
+  BasicUserSchema,
   //   UserSchemaWithAddress,
-  UserSchemaWithGeo,
+  //   UserSchemaWithGeo,
 } from "../models/User";
 import { z } from "zod";
 
-const UserResults = z.array(UserSchemaWithGeo);
+const UserResults = z.array(BasicUserSchema);
 
 type UserArray = z.infer<typeof UserResults>;
 
